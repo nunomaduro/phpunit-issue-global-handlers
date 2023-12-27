@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use Throwable;
 use PHPUnit\Framework\TestCase;
+use Throwable;
 
 final class ExampleTest extends TestCase
 {
@@ -35,7 +35,7 @@ final class ExampleTest extends TestCase
         if (self::$booted === false) {
             // boot my app just once...
 
-            set_exception_handler(static function (Throwable $throwable) : void {
+            set_exception_handler(static function (Throwable $throwable): void {
                 // Do app level stuff, send to exception apps, etc...
             });
 
